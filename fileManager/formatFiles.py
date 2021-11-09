@@ -1,11 +1,12 @@
 from tqdm import tqdm
 import time
 """
-csvDest - the csv location
-newCSV - the new CSV created from csvDest
-csvFile - the csv selected and opened to had a modifies
+csvDest - csv location
+newCSV - new CSV created from csvDest
+csvFile - csv selected and opened to had a modifies
+fileList - list of files selected
 """
-
+fileList = os.listdir(csvDest)
 def formatFiles(filelist):
     print('Ajustando arquivos CSV')
     for file in tqdm(filelist, total=len(filelist)):
